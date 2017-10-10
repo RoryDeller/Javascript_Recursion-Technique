@@ -11,7 +11,7 @@ printList([10,20,30,40,50,60,70,80]);*/
 
 function Palindrome(array, n = 0){
     if(n == array.length - n){
-        console.log("match");
+        console.log("Reached the middle, all match!");
         return true;
     }
 
@@ -20,6 +20,9 @@ function Palindrome(array, n = 0){
         return false;
     }
 
+    console.log("match between " + n + " and " + (array.length - 1 - n));
     return Palindrome(array, n + 1);
+
 }
-Palindrome("hannah");
+
+isAPalindrome = Palindrome("hannah");
